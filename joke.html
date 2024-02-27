@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="joke.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Joke for the day.?</h1>
+        <button id="jokeButton">Tell me a Joke</button>
+        <p id="joke"></p>
+    </div>
+
+    <script>
+        const jokes = [
+            "What did Neil Armstrong say when no one laughed at his moon jokes? A. “I guess you had to be there.”",
+            "How do you know when the moon is broke? A. When it’s down to its last quarter.",
+            "Which is closer, Florida or the moon? A. The moon. You can’t see Florida from here.",
+            "Why don't scientists trust atoms? Because they make up everything!",
+            "Parallel lines have so much in common. It's a shame they'll never meet.",
+            "I'm reading a book on anti-gravity. It's impossible to put down!",
+            "Did you hear about the mathematician who’s afraid of negative numbers? He’ll stop at nothing to avoid them.",
+            "Why was the math book sad? Because it had too many problems.",
+            "How do you organize a space party? You planet!",
+            "Why don't skeletons fight each other? They don't have the guts.",
+            "What did one wall say to the other wall? I'll meet you at the corner!"
+        ];
+
+        document.getElementById("jokeButton").addEventListener("click", tellJoke);
+
+        function tellJoke() {
+            const jokeElement = document.getElementById("joke");
+            const randomIndex = Math.floor(Math.random() * jokes.length);
+            jokeElement.textContent = jokes[randomIndex];
+        }
+    </script>
+</body>
+</html>
